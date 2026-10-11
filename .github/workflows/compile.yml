@@ -17,7 +17,7 @@ jobs:
       - name: Prepare build config
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y -qq aria2
+          sudo apt-get install -y -qq aria2 device-tree-compiler libyaml-dev
           sed -i 's/AK3_DEFAULT="2"/AK3_DEFAULT="1"/' compile.sh
 
       - name: Run compile.sh
